@@ -1,0 +1,32 @@
+#navbar {
+    height: 100%;
+    width: 160px;
+    /* Set the width of the sidebar */
+    position: fixed;
+    /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    /* Stay at the top */
+    left: 0;
+    background-color: pink;
+    /* Black */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar {
+        background-color: red;
+    }
+    #main-section {
+        padding-top: 50px;
+    }
+}
+
+#main-section {}
+
+.main-section {
+    padding-top: 100px;
+}
