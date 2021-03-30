@@ -1,84 +1,104 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<!--Inspiration taken from : https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-windows-10-for-development/75149 -->
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="stylesheet.css">
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="" />
+        <link rel="stylesheet" href="stylesheet.css" />
         <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     </head>
     <body>
-  <nav id="navbar">
-    <header>
-        <h1>Technical Documentation page</h1>
-    </header>
-    <a class="nav-link" href=#Section_1>Introduction</a>
-    <a class="nav-link" href=#Section_1>WSL2 Installation</a> 
-    <a class="nav-link" href=#Section_2>Install Discourse Dependencies</a>
-    <a class="nav-link" href=#Section_3>Clone Discourse</a>
-    <a class="nav-link" href=#Section_5>start PostgreSQL service and Redis server</a>
-    <a class="nav-link" href=#Section_4>Setup Database</a>
-    <a class="nav-link" href=#Section_5>Bootstrap Discourse</a>
-    <a class="nav-link" href=#Section_2>Create New Admin</a>
-    </nav>
-    <main id="main-doc">
-  <section id="Section_1" class="main-section">
-    <header class="Section_1">
-      <h1>Section 1</h1>
-    </header>
-    <p></p>
-    <p></p>
-    <code></code>
-    <ol>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-      <li></li>
-    </ol>
-  </section>
-  <section id="Section_2" class="main-section">
-    <header class="Section_2">
-      <h1>Section 2</h1>
-    </header>
-    <p></p>
-    <p></p>
-    <code></code>
-  </section>
-  <section id="Section_3" class="main-section">
-    <header class="Section_3">
-      <h1>Section 3</h1>
-    </header>
-    <p></p>
-    <p></p>
-    <code></code>
-  </section>
-  <section id="Section_4" class="main-section">
-    <header class="Section_4">
-      <h1>Section 4</h1>
-    </header>
-    <p></p>
-    <p></p>
-    <code></code>
-  </section>
-  <section id="Section_5" class="main-section">
-    <header class="Section_5">
-      <h1>Section 5</h1>
-    </header>
-    <p></p>
-    <p></p>
-    <code></code>
-  </section>
-<main>
-        
-        <script src="" async defer></script>
+        <nav id="navbar">
+            <header>
+                <h1>Technical Documentation page</h1>
+            </header>
+            <a class="nav-link" href="#Section_1">Introduction</a>
+            <a class="nav-link" href="#Section_2">Requirements</a>
+            <a class="nav-link" href="#Section_2">Windows Pre-installation Requirement</a>
+            <a class="nav-link" href="#Section_3">Install Discourse Dependencies</a>
+            <a class="nav-link" href="#Section_4">Clone Discourse</a>
+            <a class="nav-link" href="#Section_5">start PostgreSQL service and Redis server</a>
+            <a class="nav-link" href="#Section_6">Setup Database</a>
+            <a class="nav-link" href="#Section_7">Bootstrap Discourse</a>
+            <a class="nav-link" href="#Section_8">Create New Admin</a>
+        </nav>
+        <main id="main-doc">
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1>What is discourse</h1>
+                </header>
+                <p>
+                    Discourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion forum should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter. It supports the latest, stable
+                    releases of all major browsers and platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
+                </p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1>Requirements</h1>
+                </header>
+                <h2>WSL2</h2>
+                <p>The setup requires the WSL 2 installation. It is only available in Windows 10 builds 18917 or higher. Here are the steps on how to set it up:</p>
+                <ol>
+                    <li>
+                        Enable the Windows Subsystem for Linux
+                        <p>
+                            You must first enable the "Windows Subsystem for Linux" optional feature before installing any Linux distributions on Windows. Open PowerShell as Administrator and run:<br />
+                            <br />
+                            <code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code>
+                            <br />
+                            <br />
+                            In order to update to WSL 2, restart your machine and follow these steps:.
+                        </p>
+                    </li>
+                    <li>
+                        Check requirements for running WSL 2
+                        <h1>Updating to WSL 2 requires you to be running Windows 10 build 18362 or higher.</h1>
+                    </li>
+                </ol>
+                <p>
+                    Check your build version using <code>winver</code> command from the run command menu.<br />
+                    <br />
+                    If your version is lower, Update to the latest one before proceeding.
+                </p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+            <section id="Section_1" class="main-section">
+                <header class="Section_1">
+                    <h1></h1>
+                </header>
+                <p></p>
+            </section>
+        </main>
     </body>
 </html>
