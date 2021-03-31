@@ -8,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="stylesheet.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&ampdisplay=swap" rel="stylesheet" />
 </head>
 
 <body>
@@ -20,50 +20,53 @@
         </header>
         <a class="nav-link" href="#What_is_discourse">What is Discourse</a>
         <a class="nav-link" href="#Installation_Requirements">Installation Requirements</a>
-        <a class="nav-sublink" href="#wnable_wsl">Enable WSL</a>
-        <a class="nav-sublink" href="#validate_version">Validate Version</a>
-        <a class="nav-sublink" href="#enable_vm<">Enable VM</a>
-        <a class="nav-sublink" href="#download_kernel">Download Kernel</a>
-        <a class="nav-sublink" href="#set_default">Set Default</a>
-        <a class="nav-sublink" href="#instal_distro">Instal Distro</a>
+        <a class="nav-sublink" href="#Enable_WSL">Enable WSL</a>
+        <a class="nav-sublink" href="#Validate_Version">Validate Version</a>
+        <a class="nav-sublink" href="#Enable_VM">Enable VM</a>
+        <a class="nav-sublink" href="#Download_Kernel">Download Kernel</a>
+        <a class="nav-sublink" href="#Set_Default">Set Default</a>
+        <a class="nav-sublink" href="#Instal_Distro">Instal Distro</a>
         <a class="nav-link" href="#Install_Discourse_Dependencies">Install Discourse Dependencies</a>
-        <a class="nav-sublink" href="#Command_3_1">Command</a>
-        <a class="nav-sublink" href="#Section_3_1">Dependencies list</a>
+        <a class="nav-sublink" href="#Install_Discourse_Dependencies_cmd">Command</a>
+        <a class="nav-sublink" href="#Install_Discourse_Dependencies_dep">Dependencies list</a>
         <a class="nav-link" href="#Clone_Discourse">Clone Discourse</a>
-        <a class="nav-sublink" href="#Command_4_1">Command</a>
+        <a class="nav-sublink" href="#Clone_Discourse_cmd">Command</a>
         <a class="nav-link" href="#Setup_Database">Setup Database</a>
-        <a class="nav-sublink" href="#Command_6">Command</a>
+        <a class="nav-sublink" href="#Setup_Database_cmd">Command</a>
         <a class="nav-link" href="#Bundle_Discourse">Bundle Discourse</a>
-        <a class="nav-sublink" href="#Link_7">Link</a>
+        <a class="nav-sublink" href="#Bundle_Discourse_link">Link</a>
     </nav>
     <main id="main-doc">
         <section id="What_is_discourse" class="main-section">
-            <header class="Section_1">
-                <h1>What is discourse</h1>
-            </header>
+            <header>What is discourse</header>
             <p>
                 Discourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion forum should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter. It supports the latest, stable releases of all major browsers and
                 platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
             </p>
         </section>
         <section id="Installation_Requirements" class="main-section">
-            <header class="Section_2">
-                <h1>Installation Requirements</h1>
+            <header>
+                Installation Requirements
             </header>
             <p>Discourse is made available to windows user through the Windows Subsystem for Linux</p>
             <h2>Install WSL2</h2>
-            <p>The setup requires the WSL 2 installation. It is only available in Windows 10 builds 18917 or higher. Open the command menu and use the <code>winver</code> command to validate the version currently installed. If your version is lower, Update
-                to the latest one before proceeding. Once this has been validated, proceed with the following :
+            <p>The setup requires the WSL 2 installation. It is only available in Windows 10 builds 18917 or higher. Open the command menu and use the
+                <code>winver</code> command to validate the version currently installed. If your version is lower, Update to the latest one before proceeding. Once this has been validated, proceed with the following :
+
             </p>
             <ol>
                 <li>
-                    <h3 id="Section_2_1">Enable the Windows Subsystem for Linux</h3>
+                    <h3 id="Section_2_1">
+                        Enable the Windows Subsystem for Linux
+                    </h3>
                     <p>
-                        You must first enable the "Windows Subsystem for Linux" optional feature before installing any Linux distributions on Windows. Open PowerShell as Administrator and run:<br />
+                        You must first enable the "Windows Subsystem for Linux" optional feature before installing any Linux distributions on Windows. Open PowerShell as Administrator and run:
+                        <br />
                         <br />
                         <code>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart</code>
                         <br />
                         <br /> In order to update to WSL 2, restart your machine and follow these steps:.
+
                     </p>
                 </li>
                 <li>
@@ -72,47 +75,89 @@
                 </li>
                 <li>
                     <h3 id="Section_2_3">Enable Virtual Machine feature</h3>
-                    <p>Virutal machine capabilities are required in order to utilize this feature. In order to enable them open a powershell prompt and run :<br /><br />
+                    <p>Virutal machine capabilities are required in order to utilize this feature. In order to enable them open a powershell prompt and run :
+                        <br />
+                        <br />
                         <code>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart</code>
                     </p>
                 </li>
-
                 <li>
                     <h3 id="Section_2_4">Download the Linux kernel update package</h3>
-                    <p>Download the latest version from <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Here</a> and install it on your machine using elevated permissions </p>
+                    <p>Download the latest version from
+                        <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Here</a> and install it on your machine using elevated permissions
+                    </p>
                 </li>
                 <li>
                     <h3 id="Section_2_5">Set WSL 2 as your default version</h3>
-                    <p>Use <code>wsl --set-default-version 2</code > to set WSL2 as your default version</p></li>
-                    <li><h3 id="Section_2_6">Install your Linux distribution of choice</h3>
-                    <p>Make your way to the Microsoft store and search and download your favorite Linux distribution<br /><br />
-                    The following links will open the Microsoft store page for each distribution:<br /><br />
-                    <ul>
-                      <li><a href="https://www.microsoft.com/store/apps/9pjn388hp8c9">Ubuntu 16.04 LTS<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9N9TNGVNDL3Q">Ubuntu 18.04 LTS<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu 20.04 LTS<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9NJFZK00FGKV">openSUSE Leap 15.1<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9MZ3D1TRP8T1">SUSE Linux Enterprise Server 12 SP5<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9PN498VPMF3Z">SUSE Linux Enterprise Server 15 SP1<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9PKR34TNCV07">Kali Linux<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian GNU/Linux<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9n6gdm4k2hnc">Fedora Remix for WSL<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9NV1GV1PXZ6P">Pengwin<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9N8LP0X93VCP">Pengwin Enterprise<a></li>
-                      <li><a href="https://www.microsoft.com/store/apps/9p804crf0395">Alpine WSL<a></li>
-                    </ul><br /><br />
+                    <p>Use
+                        <code>wsl --set-default-version 2</code > to set WSL2 as your default version
+						</p>
+					</li>
+					<li>
+						<h3 id="Section_2_6">Install your Linux distribution of choice</h3>
+						<p>Make your way to the Microsoft store and search and download your favorite Linux distribution
+							<br />
+							<br />
+                    The following links will open the Microsoft store page for each distribution:
+							<br />
+							<br />
+							<ul>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9pjn388hp8c9">Ubuntu 16.04 LTS</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9N9TNGVNDL3Q">Ubuntu 18.04 LTS</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9n6svws3rx71">Ubuntu 20.04 LTS</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9NJFZK00FGKV">openSUSE Leap 15.1</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9MZ3D1TRP8T1">SUSE Linux Enterprise Server 12 SP5</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9PN498VPMF3Z">SUSE Linux Enterprise Server 15 SP1</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9PKR34TNCV07">Kali Linux</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9MSVKQC78PK6">Debian GNU/Linux</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9n6gdm4k2hnc">Fedora Remix for WSL</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9NV1GV1PXZ6P">Pengwin</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9N8LP0X93VCP">Pengwin Enterprise</a>
+								</li>
+								<li>
+									<a href="https://www.microsoft.com/store/apps/9p804crf0395">Alpine WSL</a>
+								</li>
+							</ul>
+							<br />
+							<br />
+							<p>
                     Upon launching the machine for the first time you will be asked to create a username and password</p>
-                    </li>
-                </ol>
-            </section>
-            <section id="Install_Discourse_Dependencies" class="main-section">
-                <header class="Section_3">
-                    <h1>Install Discourse Dependencies</h1>
-                  </header>
-                    <div>
-                      <p>From your WSL terminal run the following: <br /> <br />
-                      <code id="Command_3_1">bash <(wget -qO- https://raw.githubusercontent.com/techAPJ/install-rails/master/linux)</code><br/>
+						</li>
+					</ol>
+				</section>
+				<section id="Install_Discourse_Dependencies" class="main-section">
+					<header>
+                    Install Discourse Dependencies
+                </header>
+					<p>From your WSL terminal run the following: 
+						<br />
+						<br />
+						<code id="Command_3_1">bash <(wget -qO- https://raw.githubusercontent.com/techAPJ/install-rails/master/linux)
+						</code>
+                        <br/>
                         <br /> which will install the following :
+
                         <br />
                         <br />
                         <ul id="Section_3_1">
@@ -128,34 +173,76 @@
                             <li>MailCatcher</li>
                             <li>ImageMagick</li>
                         </ul>
-                    </p>
-                    </div>
         </section>
         <section id="Clone_Discourse" class="main-section">
-            <header class="Section_4">
-                <h1>Clone Discourse</h1>
+            <header>
+                Clone Discourse
             </header>
-            <p>From a terminal, run the following :<br />
-                <br /> <code id="Command_4_1">mkdir discourse<br />cd discourse</code><br />
-                <br />Which will make a discourse folder and position yourself in it. Once in use<br />
+            <p>
+                From a terminal, run the following :
                 <br />
-                <code>git clone https://github.com/discourse/discourse.git ~/discourse</code><br />
-                <br /> To clone the discourse project from either the official repository or a forked version from yours. </p>
-            <p></p>
+                <br />
+                <code id="Command_4_1">mkdir discourse
+								<br />cd discourse
+							</code>
+                <br />
+                <br />Which will make a discourse folder and position yourself in it. Once in use
+                <br />
+                <br />
+                <code>git clone https://github.com/discourse/discourse.git ~/discourse</code>
+                <br />
+                <br /> To clone the discourse project from either the official repository or a forked version from yours.
+            </p>
         </section>
         <section id="Setup_Database" class="main-section">
-            <header class="Section_5">
-                <h1>Setup Database</h1>
+            <header>
+                Setup Database
             </header>
-            <p>Enter the following to create a role with the same name matching your operating system's username<br /> <br /><code id="Comand_5">sudo -u postgres createuser -s "$USER"</code><br /> <br /></p>
+            <p>
+                Enter the following to create a role with the same name matching your operating system's username
+                <br />
+                <br />
+                <code id="Comand_5">sudo -u postgres createuser -s "$USER"</code>
+                <br />
+                <br />
+            </p>
         </section>
         <section id="Bundle_Discourse" class="main-section">
-            <header class="Section_6">
-                <h1>Bundle Discourse</h1>
+            <header>
+                Bundle Discourse
             </header>
-            <p>Now position yourself from within your discourse folder and install the gems by using : <br /> <br />
-                <code id="Comand_6">source ~/.bashrc<br />bundle install</code><br /><br /> Now Bundle your installation by using : <br /><br /><code>bundle exec rake db:create <br />bundle exec rake db:migrate <br />RAILS_ENV=test bundle exec rake db:create db:migrate</code><br
-                /><br /> And you are ready to dun the specs <br /><br /><code>bundle exec rake autospec <br /><br />And start the server by using<br /><br /><code>bundle exec rails server</code><br /><br /></p>
+            <p>
+                Now position yourself from within your discourse folder and install the gems by using :
+                <br />
+                <br />
+                <code id="Comand_6">
+                    source ~/.bashrc
+								<br />bundle install
+                    
+							</code>
+                <br />
+                <br /> Now Bundle your installation by using :
+                <br />
+                <br />
+                <code>
+                    bundle exec rake db:create 
+								<br />bundle exec rake db:migrate 
+								<br />RAILS_ENV=test bundle exec rake db:create db:migrate
+                
+							</code>
+                <br />
+                <br /> And you are ready to dun the specs
+                <br />
+                <br />
+                <code>bundle exec rake autospec</code>
+                <br />
+                <br />And start the server by using
+                <br />
+                <br />
+                <code>bundle exec rails server</code>
+                <br />
+                <br />
+            </p>
         </section>
     </main>
 </body>
