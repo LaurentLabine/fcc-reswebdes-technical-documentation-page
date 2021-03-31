@@ -8,38 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="" />
     <link rel="stylesheet" href="stylesheet.css" />
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <nav id="navbar">
         <header>
             <h1>Technical Documentation page</h1>
         </header>
-        <a class="nav-link" href="#Section_1">What is Discourse</a>
-        <a class="nav-link" href="#Section_2">WSL2 Installation</a>
-        <a class="nav-sublink" href="#Section_2_1">Enable WSL</a>
-        <a class="nav-sublink" href="#Section_2_2">Validate Version</a>
-        <a class="nav-sublink" href="#Section_2_3">Enable VM</a>
-        <a class="nav-sublink" href="#Section_2_4">Download Kernel</a>
-        <a class="nav-sublink" href="#Section_2_5">Set Default</a>
-        <a class="nav-sublink" href="#Section_2_6">Instal Distro</a>
-        <a class="nav-link" href="#Section_3">Install Discourse Dependencies</a>
+        <a class="nav-link" href="#what_is_discourse">What is Discourse</a>
+        <a class="nav-link" href="#wsl2_installation">WSL2 Installation</a>
+        <a class="nav-sublink" href="#wnable_wsl">Enable WSL</a>
+        <a class="nav-sublink" href="#validate_version">Validate Version</a>
+        <a class="nav-sublink" href="#enable_vm<">Enable VM</a>
+        <a class="nav-sublink" href="#download_kernel">Download Kernel</a>
+        <a class="nav-sublink" href="#set_default">Set Default</a>
+        <a class="nav-sublink" href="#instal_distro">Instal Distro</a>
+        <a class="nav-link" href="#install_discourse_dependencies">Install Discourse Dependencies</a>
         <a class="nav-sublink" href="#Command_3_1">Command</a>
         <a class="nav-sublink" href="#Section_3_1">Dependencies list</a>
-        <a class="nav-link" href="#Section_4">Clone Discourse</a>
+        <a class="nav-link" href="#clone_discourse">Clone Discourse</a>
         <a class="nav-sublink" href="#Command_4_1">Command</a>
-        <a class="nav-link" href="#Section_5">Start PostgreSQL service and Redis server</a>
+        <a class="nav-link" href="#start_postgresql_service_and_redis_server">Start PostgreSQL service and Redis server</a>
         <a class="nav-sublink" href="#Command_5">Command</a>
-        <a class="nav-link" href="#Section_6">Setup Database</a>
+        <a class="nav-link" href="#setup_database">Setup Database</a>
         <a class="nav-sublink" href="#Command_6">Command</a>
-        <a class="nav-link" href="#Section_7">Bundle Discourse</a>
+        <a class="nav-link" href="#bundle_discourse">Bundle Discourse</a>
         <a class="nav-sublink" href="#Link_7">Link</a>
     </nav>
     <main id="main-doc">
-        <section id="Section_1" class="main-section">
+        <section id="What_is_discourse" class="main-section">
             <header class="Section_1">
                 <h1>What is discourse</h1>
             </header>
@@ -48,7 +48,7 @@
                 platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
             </p>
         </section>
-        <section id="Section_2" class="main-section">
+        <section id="Installation_Requirements" class="main-section">
             <header class="Section_2">
                 <h1>Installation Requirements</h1>
             </header>
@@ -107,9 +107,10 @@
                     </li>
                 </ol>
             </section>
-            <section id="Section_3" class="main-section">
+            <section id="Install_Discourse_Dependencies" class="main-section">
                 <header class="Section_3">
                     <h1>Install Discourse Dependencies</h1>
+                  </header>
                     <div>
                       <p>From your WSL terminal run the following: <br /> <br />
                       <code id="Command_3_1">bash <(wget -qO- https://raw.githubusercontent.com/techAPJ/install-rails/master/linux)</code><br/>
@@ -131,28 +132,26 @@
                         </ul>
                     </p>
                     </div>
-                    </header>
-                    <p></p>
         </section>
-        <section id="Section_4" class="main-section">
+        <section id="Clone_Discourse" class="main-section">
             <header class="Section_4">
                 <h1>Clone Discourse</h1>
-                <p>From a terminal, run the following :<br />
-                    <br /> <code id="Command_4_1">mkdir discourse<br />cd discourse</code><br />
-                    <br />Which will make a discourse folder and position yourself in it. Once in use<br />
-                    <br />
-                    <code>git clone https://github.com/discourse/discourse.git ~/discourse</code><br />
-                    <br /> To clone the discourse project from either the official repository or a forked version from yours. </p>
             </header>
+            <p>From a terminal, run the following :<br />
+                <br /> <code id="Command_4_1">mkdir discourse<br />cd discourse</code><br />
+                <br />Which will make a discourse folder and position yourself in it. Once in use<br />
+                <br />
+                <code>git clone https://github.com/discourse/discourse.git ~/discourse</code><br />
+                <br /> To clone the discourse project from either the official repository or a forked version from yours. </p>
             <p></p>
         </section>
-        <section id="Section_5" class="main-section">
+        <section id="Setup_Database" class="main-section">
             <header class="Section_5">
                 <h1>Setup Database</h1>
             </header>
             <p>Enter the following to create a role with the same name matching your operating system's username<br /> <br /><code id="Comand_5">sudo -u postgres createuser -s "$USER"</code><br /> <br /></p>
         </section>
-        <section id="Section_6" class="main-section">
+        <section id="Bootstrap_Discourse" class="main-section">
             <header class="Section_6">
                 <h1>Bootstrap Discourse</h1>
             </header>
