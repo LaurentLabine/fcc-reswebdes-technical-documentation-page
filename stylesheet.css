@@ -2,13 +2,8 @@ html body {
     font-family: 'Montserrat', sans-serif;
 }
 
-
-/* .main-section {
-    padding: 0% 25%;
-} */
-
 section {
-    padding: 0% 25%;
+    padding: 0% 20%;
 }
 
 section p {
@@ -20,7 +15,7 @@ section p {
 
 #navbar {
     height: 100%;
-    width: 20%;
+    width: 15%;
     position: fixed;
     top: 0;
     left: 0;
@@ -51,6 +46,11 @@ section p {
     font-size: 14px;
 }
 
+#navbar header {
+    font-size: 20px;
+    padding: 20px;
+}
+
 code {
     background-color: #D3D3D3;
 }
@@ -79,11 +79,15 @@ header {
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 
-@media screen and (max-height: 450px) {
-    .sidenav {
-        /* padding-top: 15px; */
+@media screen and (max-width: 1000px) {
+    #navbar a.nav-link {
+        font-size: 10px;
     }
-    .sidenav a {
-        /* font-size: 18px; */
+    #navbar a.nav-sublink {
+        padding: 2px 8px 6px 30px;
+        font-size: 6px;
+    }
+    #navbar header {
+        font-size: 12px;
     }
 }
