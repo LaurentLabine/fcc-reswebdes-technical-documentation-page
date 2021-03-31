@@ -18,24 +18,22 @@
         <header>
             <h1>Technical Documentation page</h1>
         </header>
-        <a class="nav-link" href="#what_is_discourse">What is Discourse</a>
-        <a class="nav-link" href="#wsl2_installation">WSL2 Installation</a>
+        <a class="nav-link" href="#What_is_discourse">What is Discourse</a>
+        <a class="nav-link" href="#Installation_Requirements">Installation Requirements</a>
         <a class="nav-sublink" href="#wnable_wsl">Enable WSL</a>
         <a class="nav-sublink" href="#validate_version">Validate Version</a>
         <a class="nav-sublink" href="#enable_vm<">Enable VM</a>
         <a class="nav-sublink" href="#download_kernel">Download Kernel</a>
         <a class="nav-sublink" href="#set_default">Set Default</a>
         <a class="nav-sublink" href="#instal_distro">Instal Distro</a>
-        <a class="nav-link" href="#install_discourse_dependencies">Install Discourse Dependencies</a>
+        <a class="nav-link" href="#Install_Discourse_Dependencies">Install Discourse Dependencies</a>
         <a class="nav-sublink" href="#Command_3_1">Command</a>
         <a class="nav-sublink" href="#Section_3_1">Dependencies list</a>
-        <a class="nav-link" href="#clone_discourse">Clone Discourse</a>
+        <a class="nav-link" href="#Clone_Discourse">Clone Discourse</a>
         <a class="nav-sublink" href="#Command_4_1">Command</a>
-        <a class="nav-link" href="#start_postgresql_service_and_redis_server">Start PostgreSQL service and Redis server</a>
-        <a class="nav-sublink" href="#Command_5">Command</a>
-        <a class="nav-link" href="#setup_database">Setup Database</a>
+        <a class="nav-link" href="#Setup_Database">Setup Database</a>
         <a class="nav-sublink" href="#Command_6">Command</a>
-        <a class="nav-link" href="#bundle_discourse">Bundle Discourse</a>
+        <a class="nav-link" href="#Bundle_Discourse">Bundle Discourse</a>
         <a class="nav-sublink" href="#Link_7">Link</a>
     </nav>
     <main id="main-doc">
@@ -151,20 +149,14 @@
             </header>
             <p>Enter the following to create a role with the same name matching your operating system's username<br /> <br /><code id="Comand_5">sudo -u postgres createuser -s "$USER"</code><br /> <br /></p>
         </section>
-        <section id="Bootstrap_Discourse" class="main-section">
+        <section id="Bundle_Discourse" class="main-section">
             <header class="Section_6">
-                <h1>Bootstrap Discourse</h1>
+                <h1>Bundle Discourse</h1>
             </header>
             <p>Now position yourself from within your discourse folder and install the gems by using : <br /> <br />
                 <code id="Comand_6">source ~/.bashrc<br />bundle install</code><br /><br /> Now Bundle your installation by using : <br /><br /><code>bundle exec rake db:create <br />bundle exec rake db:migrate <br />RAILS_ENV=test bundle exec rake db:create db:migrate</code><br
                 /><br /> And you are ready to dun the specs <br /><br /><code>bundle exec rake autospec <br /><br />And start the server by using<br /><br /><code>bundle exec rails server</code><br /><br /></p>
         </section>
-        <!-- <section id="Section_7" class="main-section">
-            <header class="Section_7">
-                <h1>Bootstrap Discourse</h1>
-            </header>
-            <p>There you made it! Hopefully if all went well you should be capable of using <a id="Link_7" href="http://localhost:3000/">this link</a> to access your hosted version of discourse!</p>
-        </section> -->
     </main>
 </body>
 
