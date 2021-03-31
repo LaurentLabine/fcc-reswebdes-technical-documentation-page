@@ -18,7 +18,7 @@
         <header>
             <h1>Technical Documentation page</h1>
         </header>
-        <a class="nav-link" href="#Section_1">Introduction</a>
+        <a class="nav-link" href="#Section_1">What is Discourse</a>
         <a class="nav-link" href="#Section_2">WSL2 Installation</a>
         <a class="nav-sublink" href="#Section_2_1">Enable WSL</a>
         <a class="nav-sublink" href="#Section_2_2">Validate Version</a>
@@ -32,9 +32,11 @@
         <a class="nav-link" href="#Section_4">Clone Discourse</a>
         <a class="nav-sublink" href="#Command_4_1">Command</a>
         <a class="nav-link" href="#Section_5">Start PostgreSQL service and Redis server</a>
+        <a class="nav-sublink" href="#Command_5">Command</a>
         <a class="nav-link" href="#Section_6">Setup Database</a>
+        <a class="nav-sublink" href="#Command_6">Command</a>
         <a class="nav-link" href="#Section_7">Bundle Discourse</a>
-        <a class="nav-link" href="#Section_8">Conclusion</a>
+        <a class="nav-sublink" href="#Link_7">Link</a>
     </nav>
     <main id="main-doc">
         <section id="Section_1" class="main-section">
@@ -42,7 +44,8 @@
                 <h1>What is discourse</h1>
             </header>
             <p>
-                Discourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion forum should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter. It supports the latest, stable releases of all major browsers and platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
+                Discourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion forum should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter. It supports the latest, stable releases of all major browsers and
+                platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
             </p>
         </section>
         <section id="Section_2" class="main-section">
@@ -51,7 +54,8 @@
             </header>
             <p>Discourse is made available to windows user through the Windows Subsystem for Linux</p>
             <h2>Install WSL2</h2>
-            <p>The setup requires the WSL 2 installation. It is only available in Windows 10 builds 18917 or higher. Open the command menu and use the <code>winver</code> command to validate the version currently installed. If your version is lower, Update to the latest one before proceeding. Once this has been validated, proceed with the following :
+            <p>The setup requires the WSL 2 installation. It is only available in Windows 10 builds 18917 or higher. Open the command menu and use the <code>winver</code> command to validate the version currently installed. If your version is lower, Update
+                to the latest one before proceeding. Once this has been validated, proceed with the following :
             </p>
             <ol>
                 <li>
@@ -108,11 +112,10 @@
                     <h1>Install Discourse Dependencies</h1>
                     <div>
                       <p>From your WSL terminal run the following: <br /> <br />
-                      <code id="Command_3_1">bash <(wget -qO- https://raw.githubusercontent.com/techAPJ/install-rails/master/linux)</code></br>
-                        </br>
-                        which will install the following :
-                        </br />
-                        </br />
+                      <code id="Command_3_1">bash <(wget -qO- https://raw.githubusercontent.com/techAPJ/install-rails/master/linux)</code><br/>
+                        <br /> which will install the following :
+                        <br />
+                        <br />
                         <ul id="Section_3_1">
                             <li>Git 113</li>
                             <li>rbenv</li>
@@ -134,13 +137,12 @@
         <section id="Section_4" class="main-section">
             <header class="Section_4">
                 <h1>Clone Discourse</h1>
-                <p>From a terminal, run the following :</br>
-                    </br> <code id="Command_4_1">mkdir discourse</br>cd discourse</code></br>
-                    </br>Which will make a discourse folder and position yourself in it. Once in use</br>
-                    </br>
-                    <code>git clone https://github.com/discourse/discourse.git ~/discourse</code></br>
-                    </br>
-                    To clone the discourse project from either the official repository or a forked version from yours. </p>
+                <p>From a terminal, run the following :<br />
+                    <br /> <code id="Command_4_1">mkdir discourse<br />cd discourse</code><br />
+                    <br />Which will make a discourse folder and position yourself in it. Once in use<br />
+                    <br />
+                    <code>git clone https://github.com/discourse/discourse.git ~/discourse</code><br />
+                    <br /> To clone the discourse project from either the official repository or a forked version from yours. </p>
             </header>
             <p></p>
         </section>
@@ -148,20 +150,22 @@
             <header class="Section_5">
                 <h1>Setup Database</h1>
             </header>
-            <p>Enter the following to create a role with the same name matching your operating system's username<br /> <br /><code>sudo -u postgres createuser -s "$USER"</code><br /> <br /></p>
+            <p>Enter the following to create a role with the same name matching your operating system's username<br /> <br /><code id="Comand_5">sudo -u postgres createuser -s "$USER"</code><br /> <br /></p>
         </section>
         <section id="Section_6" class="main-section">
             <header class="Section_6">
                 <h1>Bootstrap Discourse</h1>
             </header>
-            <p>Now position yourself from within your discourse folder and install the gems by using : <br /> <br /><code>source ~/.bashrc<br />bundle install</code><br /><br /> Now Bundle your installation by using : <br /><br /><code>bundle exec rake db:create <br />bundle exec rake db:migrate <br />RAILS_ENV=test bundle exec rake db:create db:migrate</code><br /><br /> And you are ready to dun the specs <br /><br /><code>bundle exec rake autospec <br /><br />And start the server by using<br /><br /><code>bundle exec rails server</code><br /><br /></p>
+            <p>Now position yourself from within your discourse folder and install the gems by using : <br /> <br />
+                <code id="Comand_6">source ~/.bashrc<br />bundle install</code><br /><br /> Now Bundle your installation by using : <br /><br /><code>bundle exec rake db:create <br />bundle exec rake db:migrate <br />RAILS_ENV=test bundle exec rake db:create db:migrate</code><br
+                /><br /> And you are ready to dun the specs <br /><br /><code>bundle exec rake autospec <br /><br />And start the server by using<br /><br /><code>bundle exec rails server</code><br /><br /></p>
         </section>
-        <section id="Section_7" class="main-section">
+        <!-- <section id="Section_7" class="main-section">
             <header class="Section_7">
                 <h1>Bootstrap Discourse</h1>
             </header>
-            <p>There you made it! Hopefully if all went well you should be capable of using <a href="http://localhost:3000/">this link</a> to access your hosted version of discourse!</p>
-        </section>
+            <p>There you made it! Hopefully if all went well you should be capable of using <a id="Link_7" href="http://localhost:3000/">this link</a> to access your hosted version of discourse!</p>
+        </section> -->
     </main>
 </body>
 
