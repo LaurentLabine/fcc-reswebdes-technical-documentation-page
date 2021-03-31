@@ -2,8 +2,17 @@ html body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.main-section {
+
+/* .main-section {
     padding: 0% 25%;
+} */
+
+section {
+    padding: 0% 25%;
+}
+
+section p {
+    padding: 20px;
 }
 
 
@@ -44,6 +53,11 @@ html body {
 
 code {
     background-color: #D3D3D3;
+}
+
+header {
+    font-size: 24px;
+    font-weight: 700;
 }
 
 

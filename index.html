@@ -16,9 +16,11 @@
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <nav id="navbar">
         <header>
-            <h1>Technical Documentation page</h1>
+            <h1>Discourse Local Setup Guide</h1>
         </header>
+
         <a class="nav-link" href="#What_is_discourse">What is Discourse</a>
+        <a class="nav-link" href="#Prerequisite">#Prerequisite</a>
         <a class="nav-link" href="#Installation_Requirements">Installation Requirements</a>
         <a class="nav-sublink" href="#Enable_WSL">Enable WSL</a>
         <a class="nav-sublink" href="#Validate_Version">Validate Version</a>
@@ -35,13 +37,17 @@
         <a class="nav-sublink" href="#Setup_Database_cmd">Command</a>
         <a class="nav-link" href="#Bundle_Discourse">Bundle Discourse</a>
         <a class="nav-sublink" href="#Bundle_Discourse_link">Link</a>
+        <a class="nav-link" href="#References">References</a>
+        <a class="nav-sublink" href="#Discourse">Discourse</a>
+        <a class="nav-sublink" href="#Microsoft">WSL2</a>
+
     </nav>
     <main id="main-doc">
         <section id="What_is_discourse" class="main-section">
             <header>What is discourse</header>
             <p>
-                Discourse is a from-scratch reboot, an attempt to reimagine what a modern Internet discussion forum should be today, in a world of ubiquitous smartphones, tablets, Facebook, and Twitter. It supports the latest, stable releases of all major browsers and
-                platforms and this guide will guide you through setting up and hosting your very own discourse forum locally on your machine.
+                Discourse is an open source forum made available to host your very own online community. It is made available for your personal use free of charge and come with the promise of always being free. Here is how to get your very own forum running hosted locally
+                on your windows machine.
             </p>
         </section>
         <section id="Installation_Requirements" class="main-section">
@@ -243,9 +249,18 @@
                 <br />
                 <code>bundle exec rails server</code>
                 <br />
-                <br />
+                <br /> And that is IT folks! You should have your own server available for hours of fun should you have to debug some styling discrepancies!
             </p>
         </section>
+        <section id="References" class="main-section">
+            <header>
+                References
+            </header>
+            <ul>
+                <li id="Microsoft"><a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps">WSL2 Installation Guide></a></li>
+                <li id="Discourse"><a href="https://meta.discourse.org/t/beginners-guide-to-install-discourse-on-windows-10-for-development/75149">Discourse</li>
+          </ul>
+      </section>
     </main>
 </body>
 
