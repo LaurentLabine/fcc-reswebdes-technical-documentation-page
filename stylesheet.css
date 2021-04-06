@@ -14,7 +14,7 @@ html body {
 }
 
 section {
-    padding: 2rem 2rem 2rem 30vw;
+    padding: 2rem 2rem 2rem 20rem;
     width: 100%
 }
 
@@ -28,6 +28,7 @@ section p {
 #navbar {
     height: 100%;
     width: 25vw;
+    max-width: 300px;
     position: fixed;
     top: 0;
     left: 0;
@@ -98,5 +99,8 @@ ul {
     }
     #navbar header {
         font-size: 0.5rem;
+    }
+    section {
+        padding: 2rem 2rem 2rem 10rem;
     }
 }
