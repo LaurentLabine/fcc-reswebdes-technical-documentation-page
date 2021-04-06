@@ -1,13 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 html body {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.main-section {
+    width: 100%;
 }
 
 section {
-    padding: 0% 20%;
+    padding: 2rem 2rem 2rem 30vw;
+    width: 100%
 }
 
 section p {
-    padding: 20px;
+    padding: 2rem;
 }
 
 
@@ -15,14 +27,16 @@ section p {
 
 #navbar {
     height: 100%;
-    width: 15%;
+    width: 25vw;
     position: fixed;
     top: 0;
     left: 0;
     background-color: #111;
     color: white;
-    overflow-x: hidden;
-    font-size: 20px;
+}
+
+ol {
+    padding-left: 10vw;
 }
 
 
@@ -30,20 +44,18 @@ section p {
 
 #navbar a {
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     color: #818181;
     display: block;
 }
 
 #navbar a.nav-link {
     padding: 2px 8px 6px 16px;
-    /* padding: 10px; */
-    font-size: 20px;
 }
 
 #navbar a.nav-sublink {
     padding: 2px 8px 6px 30px;
-    font-size: 14px;
+    font-size: 0.8rem;
 }
 
 #navbar header {
@@ -56,7 +68,7 @@ code {
 }
 
 header {
-    font-size: 24px;
+    font-size: 2.5rem;
     font-weight: 700;
 }
 
@@ -70,10 +82,8 @@ header {
 
 /* Style page content */
 
-.main {
-    /* margin-left: 160px; */
-    /* Same as the width of the sidebar */
-    padding: 0px 10px;
+ul {
+    padding-left: 5rem;
 }
 
 
@@ -81,13 +91,12 @@ header {
 
 @media screen and (max-width: 1000px) {
     #navbar a.nav-link {
-        font-size: 10px;
+        font-size: 0.5rem;
     }
     #navbar a.nav-sublink {
-        padding: 2px 8px 6px 30px;
-        font-size: 6px;
+        font-size: 0.4rem;
     }
     #navbar header {
-        font-size: 12px;
+        font-size: 0.5rem;
     }
 }
