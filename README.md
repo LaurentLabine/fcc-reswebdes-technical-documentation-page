@@ -1,4 +1,4 @@
-# freeCodeCamp Responsive Web Design Projects - Build a Technical Documentation page
+# freeCodeCamp Responsive Web Design Projects - Project 4 - Build a Technical Documentation page
 
 I built this project as part of freeCodeCamp's curriculum to learn and practice Responsive Web Design.
 
